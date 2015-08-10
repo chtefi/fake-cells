@@ -1,23 +1,23 @@
 {
-  "name": "library-boilerplate-example",
+  "name": "fake-cells-example",
   "version": "1.0.0",
-  "description": "library-boilerplate-example-description",
+  "description": "fake-cells-example-description",
   "main": "server.js",
   "scripts": {
     "start": "node server.js"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/library-boilerplate-author/library-boilerplate.git"
+    "url": "https://github.com/fake-cells-author/fake-cells.git"
   },
   "keywords": [
-    "library-boilerplate-keywords"
+    "fake-cells-keywords"
   ],
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/library-boilerplate-author/library-boilerplate/issues"
+    "url": "https://github.com/fake-cells-author/fake-cells/issues"
   },
-  "homepage": "https://github.com/library-boilerplate-author/library-boilerplate",
+  "homepage": "https://github.com/fake-cells-author/fake-cells",
   "dependencies": {
     "react": "^0.13.3"
   },

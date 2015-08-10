@@ -29,7 +29,7 @@ module.exports = {
     }]
   },
   output: {
-    library: 'library-boilerplate',
+    library: 'fake-cells',
     libraryTarget: 'umd'
   },
   plugins: plugins,

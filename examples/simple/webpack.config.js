@@ -19,7 +19,7 @@ module.exports = {
   ],
   resolve: {
     alias: {
-      'library-boilerplate': path.join(__dirname, '..', '..', 'src')
+      'fake-cells': path.join(__dirname, '..', '..', 'src')
     },
     extensions: ['', '.js']
   },

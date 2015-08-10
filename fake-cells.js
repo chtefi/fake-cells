@@ -1,3 +1,5 @@
+/* jshint esnext: true */
+
 const PIXEL_PERFECT_CORRECTION = 0.5;
 
 export default (options) => {

@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { add } from 'library-boilerplate';
+import { add } from 'fake-cells';
 
 export default class App extends Component {
   render() {
