@@ -1,7 +1,3 @@
-import React from 'react';
-import App from './components/App';
-
-React.render(
-  <App />,
-  document.getElementById('root')
-);
+import fakeCells from 'fake-cells';
+const container = document.getElementById('container');
+fakeCells({ container });
