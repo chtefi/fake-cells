@@ -1,10 +1,170 @@
 <html>
-  <head>
+
+<head>
     <title>fake-cells-example-title</title>
-  </head>
-  <body>
-    <canvas id="container" style="height: 500px; width: 500px;">
-    </canvas>
-		<script src="/static/bundle.js"></script>
-  </body>
+    <style>
+    body {
+    	margin: 0;
+    }
+    
+    #table {
+        border-collapse: collapse;
+    }
+    
+    #table td {
+        border: 1px solid #ccc;
+        padding: 5px;
+    }
+
+    #container {
+    	height: 100vh;
+    }
+    </style>
+</head>
+
+<body>
+    <div id="container">
+        <table id="table" cellspacing="0">
+            <thead>
+                <tr>
+                    <th>Country</th>
+                    <th>Company</th>
+                    <th>Phone</th>
+                    <th>Id</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Congo, the Democratic Republic of the</td>
+                    <td>Sociis Natoque Institute</td>
+                    <td>04 26 51 32 21</td>
+                    <td>BA6824E0-527E-F99E-9A5F-7BBDA3E3A679</td>
+                </tr>
+                <tr>
+                    <td>Croatia</td>
+                    <td>Eros Foundation</td>
+                    <td>01 83 83 63 36</td>
+                    <td>10FAED29-9447-119C-0B72-8B1341B80D10</td>
+                </tr>
+                <tr>
+                    <td>Italy</td>
+                    <td>Pede Ac LLC</td>
+                    <td>08 10 38 16 82</td>
+                    <td>218D3344-CA75-9086-4A29-5A470320AE76</td>
+                </tr>
+                <tr>
+                    <td>Christmas Island</td>
+                    <td>Placerat Company</td>
+                    <td>02 33 98 17 81</td>
+                    <td>EE45D36B-9BEF-50C6-7D99-7AA768A58CB3</td>
+                </tr>
+                <tr>
+                    <td>Gambia</td>
+                    <td>Erat PC</td>
+                    <td>04 60 41 65 57</td>
+                    <td>46C208F1-A68D-FB20-1EE7-604A56C9985D</td>
+                </tr>
+                <tr>
+                    <td>Tajikistan</td>
+                    <td>Elit Corp.</td>
+                    <td>04 33 33 88 65</td>
+                    <td>2AB5E21B-A9C2-D78D-B968-A0E9E440C73D</td>
+                </tr>
+                <tr>
+                    <td>Cook Islands</td>
+                    <td>Turpis Nulla Associates</td>
+                    <td>03 85 28 11 14</td>
+                    <td>A7795D19-EAD6-217E-CD9F-AACFACCE64FD</td>
+                </tr>
+                <tr>
+                    <td>Czech Republic</td>
+                    <td>Porttitor Industries</td>
+                    <td>02 07 86 06 34</td>
+                    <td>74E8AB3C-CDF0-9167-E08D-F3DF236E4DFC</td>
+                </tr>
+                <tr>
+                    <td>Saudi Arabia</td>
+                    <td>Mus Aenean LLC</td>
+                    <td>02 71 16 63 61</td>
+                    <td>52581E18-D984-1893-0AF4-841E2C09CD4E</td>
+                </tr>
+                <tr>
+                    <td>Philippines</td>
+                    <td>Suscipit Nonummy Fusce Incorporated</td>
+                    <td>04 96 40 78 77</td>
+                    <td>ECCC62F1-AB8A-6B18-A92B-E86AE293962B</td>
+                </tr>
+                <tr>
+                    <td>United States</td>
+                    <td>Mauris Molestie Pharetra Company</td>
+                    <td>09 78 80 98 28</td>
+                    <td>DB4E1506-CD4F-8C8B-599D-F32D28EC9548</td>
+                </tr>
+                <tr>
+                    <td>Macao</td>
+                    <td>Nulla Limited</td>
+                    <td>09 65 96 90 02</td>
+                    <td>FA059C3E-3198-560F-1654-D8096CF7F43E</td>
+                </tr>
+                <tr>
+                    <td>Serbia</td>
+                    <td>Diam Vel Foundation</td>
+                    <td>08 13 95 83 50</td>
+                    <td>4ADAC7DB-5019-BDF9-720C-5D08EA9CBE51</td>
+                </tr>
+                <tr>
+                    <td>Guadeloupe</td>
+                    <td>Auctor Corp.</td>
+                    <td>06 25 05 78 29</td>
+                    <td>1CB43FDF-B31C-4592-F520-0A6219F3CC19</td>
+                </tr>
+                <tr>
+                    <td>South Africa</td>
+                    <td>Cursus Integer PC</td>
+                    <td>01 34 11 65 14</td>
+                    <td>A313D84B-EFDB-BEF8-BEEF-89E2E3ED8CD9</td>
+                </tr>
+                <tr>
+                    <td>Martinique</td>
+                    <td>Sociis Natoque Penatibus Corp.</td>
+                    <td>08 54 07 41 92</td>
+                    <td>D2B7A2DD-C042-E22A-F4B5-69412134CF3C</td>
+                </tr>
+                <tr>
+                    <td>Aruba</td>
+                    <td>Scelerisque Industries</td>
+                    <td>03 28 82 82 43</td>
+                    <td>6A6F7438-401B-3CC0-1A59-5C6101B947F1</td>
+                </tr>
+                <tr>
+                    <td>Namibia</td>
+                    <td>Dui In Sodales Institute</td>
+                    <td>05 74 30 66 89</td>
+                    <td>2A01E459-908E-B09C-2A2D-F62B10253F1A</td>
+                </tr>
+                <tr>
+                    <td>Aruba</td>
+                    <td>Ut Pharetra Sed Company</td>
+                    <td>02 71 13 50 48</td>
+                    <td>D9412DAE-17DE-4827-061A-C25A747B33A1</td>
+                </tr>
+                <tr>
+                    <td>El Salvador</td>
+                    <td>Fusce Feugiat Lorem Institute</td>
+                    <td>07 26 63 19 16</td>
+                    <td>F37FF1B3-08F2-EF8D-CBCD-DEFB83C1133A</td>
+                </tr>
+                <tr>
+                    <td>South Sudan</td>
+                    <td>Ornare Corporation</td>
+                    <td>02 51 27 20 53</td>
+                    <td>011A9A50-1C1B-B3A9-3B2D-6E00D2944890</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <script src="/static/bundle.js"></script>
+</body>
+
 </html>
