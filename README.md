@@ -2,8 +2,8 @@
 [![npm version](https://img.shields.io/npm/v/fake-cells.svg?style=flat-square)](https://www.npmjs.com/package/fake-cells) 
 
 
-Draw some fake cells at the end of a `<table>` following the dimensions of the
-existing cells.
+Draw some fake cells at the end of a `<table>` according to the dimensions of
+the existing cells.
 
 ### API
 
