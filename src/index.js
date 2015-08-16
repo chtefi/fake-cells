@@ -26,7 +26,7 @@ export default function fakeCells(opts) {
   const table = document.querySelector(options.tableId);
   const firstRow = document.querySelector(options.tableId + ' tbody tr:first-child');
   const cells = document.querySelectorAll(options.tableId + ' tbody tr:first-child td');
-  
+
   // can't do anything if there are no rows or no cells
   if (!firstRow || cells.length === 0) {
     return;

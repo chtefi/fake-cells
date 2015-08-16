@@ -1,6 +1,7 @@
 export function createContainer() {
   const container = document.createElement('div');
   container.id = 'cntnr';
+  container.style.height = '200px';
   document.body.appendChild(container);
 
   const table = document.createElement('table');

@@ -1,29 +1,37 @@
 module.exports = function test(config) {
   config.set({
     files: [
-       'test/**/*.spec.js'
+      'test/**/*.spec.js'
     ],
     preprocessors: {
-      'src/**/*.js': ['webpack'],
       'test/**/*.spec.js': ['webpack']
     },
     frameworks: ['mocha'],
-    browsers: [ 'PhantomJS' ],
+    browsers: ['PhantomJS'],
     singleRun: true,
-    reporters: [ 'spec' ], // spec reporter is doing like mocha (one check line per test)
+    reporters: ['spec', 'coverage'], // spec reporter is doing like mocha (one check line per test)
+
+    coverageReporter: {
+      type: 'html',
+      dir: 'coverage/'
+    },
 
     webpack: {
       module: {
-        loaders: [
-        {
-          test: /\.js$/, loaders: [ 'babel-loader'], exclude: /node_modules/
-        }
-        ]
+        loaders: [{
+          test: /\.js$/,
+          loaders: ['babel-loader'],
+          exclude: /node_modules/
+        }],
+        postLoaders: [{
+          test: /\.js$/,
+          exclude: /(test|node_modules)/,
+          loader: 'istanbul-instrumenter'
+        }]
       }
     },
     webpackMiddleware: {
-      noInfo: true  // hide webpack crap messages in console
+      noInfo: true // hide webpack crap messages in console
     }
   });
 };
-

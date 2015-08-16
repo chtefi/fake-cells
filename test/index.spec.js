@@ -7,7 +7,8 @@ describe('the library', () => {
   afterEach(() => wipeContainer());
 
   it('should throws an exception if no id are specified', () => {
-    expect(() => fakeCells()).to.throw;
+    expect(() => fakeCells()).to.throw(Error);
+    expect(() => fakeCells({ containerId: 'test'})).to.throw(Error);
   });
 
   it('should do nothing if there is no row in the table', () => {
