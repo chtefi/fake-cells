@@ -3,32 +3,32 @@ import { createContainer, wipeContainer, addSomeRows } from './helpers';
 import fakeCells from '../src';
 
 describe('the library', () => {
-	beforeEach(() => createContainer());
-	afterEach(() => wipeContainer());
+  beforeEach(() => createContainer());
+  afterEach(() => wipeContainer());
 
-	it('should throws an exception if no id are specified', () => {
-		expect(() => fakeCells()).to.throw;
+  it('should throws an exception if no id are specified', () => {
+    expect(() => fakeCells()).to.throw;
   });
 
-	it('should do nothing if there is no row in the table', () => {
-		fakeCells({
-			containerId: '#cntnr',
-			tableId: '#tbl'
+  it('should do nothing if there is no row in the table', () => {
+    fakeCells({
+      containerId: '#cntnr',
+      tableId: '#tbl'
     });
 
-		const canvas = document.querySelector('#cntnr canvas');
-		expect(canvas).to.be.null;
+    const canvas = document.querySelector('#cntnr canvas');
+    expect(canvas).to.be.null;
   });
 
   it('should add a canvas to the container if there are some rows', () => {
-  	addSomeRows();
+    addSomeRows();
 
-      fakeCells({
-				containerId: '#cntnr',
-				tableId: '#tbl'
-      });
+    fakeCells({
+      containerId: '#cntnr',
+      tableId: '#tbl'
+    });
 
-      const canvas = document.querySelector('#cntnr canvas');
-			expect(canvas).to.be.not.null;
+    const canvas = document.querySelector('#cntnr canvas');
+    expect(canvas).to.be.not.null;
   });
 });
