@@ -1,3 +1,5 @@
+var path = require('path');
+
 module.exports = function test(config) {
   config.set({
     files: [
@@ -12,8 +14,14 @@ module.exports = function test(config) {
     reporters: ['spec', 'coverage'], // spec reporter is doing like mocha (one check line per test)
 
     coverageReporter: {
-      type: 'html',
-      dir: 'coverage/'
+      dir: 'coverage/',
+      reporters: [{
+        type: 'text'
+      }, {
+        type: 'text-summary'
+      }, {
+        type: 'html'
+      }]
     },
 
     webpack: {
@@ -21,13 +29,17 @@ module.exports = function test(config) {
         loaders: [{
           test: /\.js$/,
           loaders: ['babel-loader'],
-          exclude: /node_modules/
-        }],
-        postLoaders: [{
+          include: path.resolve('test/')
+        }, {
           test: /\.js$/,
-          exclude: /(test|node_modules)/,
-          loader: 'istanbul-instrumenter'
+          loaders: ['isparta'],
+          include: path.resolve('src/')
         }]
+        // postLoaders: [{
+        //   test: /\.js$/,
+        //   exclude: /(test|node_modules)/,
+        //   loader: 'istanbul-instrumenter'
+        // }]
       }
     },
     webpackMiddleware: {
