@@ -10,7 +10,8 @@
     "build": "babel src --out-dir lib",
     "build:umd": "webpack src/index.js dist/fake-cells.js && set NODE_ENV=production&& webpack src/index.js dist/fake-cells.min.js",
     "lint": "eslint src test examples",
-    "test:watch": "./node_modules/.bin/karma start --no-single-run --auto-watch"
+    "test:watch": "./node_modules/.bin/karma start --no-single-run --auto-watch",
+    "test:coveralls": "cat ./coverage/lcov.info | node ./node_modules/coveralls/bin/coveralls.js"
   },
   "repository": {
     "type": "git",
@@ -31,6 +32,7 @@
     "babel-eslint": "^3.1.15",
     "babel-loader": "^5.1.4",
     "chai": "^3.2.0",
+    "coveralls": "^2.11.4",
     "eslint": "^0.23",
     "eslint-config-airbnb": "0.0.6",
     "eslint-plugin-react": "^2.3.0",

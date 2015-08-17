@@ -21,6 +21,8 @@ module.exports = function test(config) {
         type: 'text-summary'
       }, {
         type: 'html'
+      }, {
+        type: 'lcovonly'
       }]
     },
 
