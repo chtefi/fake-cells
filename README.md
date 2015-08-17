@@ -1,5 +1,4 @@
-[![build status](https://img.shields.io/travis/chtefi/fake-cells/master.svg?style=flat-square)](https://travis-ci.org/chtefi/fake-cells) 
-[![npm version](https://img.shields.io/npm/v/fake-cells.svg?style=flat-square)](https://www.npmjs.com/package/fake-cells) 
+[![build status](https://img.shields.io/travis/chtefi/fake-cells/master.svg?style=flat-square)](https://travis-ci.org/chtefi/fake-cells) [![Coverage Status](https://coveralls.io/repos/chtefi/fake-cells/badge.svg?branch=master&service=github)](https://coveralls.io/github/chtefi/fake-cells?branch=master)
 
 
 Draw some fake cells at the end of a `<table>` according to the dimensions of

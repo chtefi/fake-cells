@@ -22,7 +22,11 @@ module.exports = function test(config) {
       }, {
         type: 'html'
       }, {
-        type: 'lcovonly'
+        type: 'lcovonly',
+        subdir: '.' // to be easily accessible by npm commands
+        // by default, karma puts in coverage/PhantomJS 1.9.8 (Windows 8 0.0.0) otherwise
+        // and because we are using TravisCI it's not Windows. Thus we want
+        // a fixed path
       }]
     },
 
